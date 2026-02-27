@@ -1,4 +1,4 @@
-import PageLayout from "@/src/components/PageLayout";
+import PageLayout from "@/src/components/layout/PageLayout";
 import React from "react";
 
 export default function AuthLayout({
@@ -6,5 +6,5 @@ export default function AuthLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <PageLayout className="justify-center">{children}</PageLayout>;
+  return <PageLayout className="items-center">{children}</PageLayout>;
 }

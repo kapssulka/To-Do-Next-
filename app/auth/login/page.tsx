@@ -1,30 +1,22 @@
-import React from "react";
+import AuthForm from "@/src/components/layout/AuthForm";
+import AccentButton from "@/src/ui/buttons/AccentButton";
+import Input from "@/src/ui/Input";
+import Link from "next/link";
 
 export default function page() {
   return (
-    <div className="flex flex-col gap-4">
-      <h2 className="text-2xl font-bold text-center text-[#333]">
-        Авторизация
-      </h2>
-      <input
-        type="email"
-        placeholder="Email"
-        className="border border-gray-300 rounded px-4 py-2"
-      />
-      <input
-        type="password"
-        placeholder="Пароль"
-        className="border border-gray-300 rounded px-4 py-2"
-      />
-      <button className="bg-[#7C3AED] text-white py-2 rounded mt-2">
-        Войти
-      </button>
+    <AuthForm formTitle="Авторизация">
+      <Input type="email" placeholder="Email" />
+      <Input type="password" placeholder="Пароль" />
+
+      <AccentButton children="Войти" />
+
       <p className="text-sm text-gray-600 text-center mt-2">
         Нет аккаунта?{" "}
-        <a href="/auth/registration" className="text-[#7C3AED]">
+        <Link href="/auth/registration" className="text-[#7C3AED]">
           Регистрация
-        </a>
+        </Link>
       </p>
-    </div>
+    </AuthForm>
   );
 }
